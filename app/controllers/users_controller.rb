@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    binding.pry
+    #binding.pry
     @user.update(user_params)
   end
 
