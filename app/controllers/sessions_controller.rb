@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(name: params[:user][:name])
     if @user.authenticate
       session[:user_id] = @user.id
+      # redirect_to welcome_path
     else
     end
   end
