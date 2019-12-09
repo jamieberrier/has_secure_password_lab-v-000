@@ -6,4 +6,9 @@ class UsersController < ApplicationController
   def create
     binding.pry
   end
+
+  private
+
+  def user_params
+  end
 end
