@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def create
     binding.pry
+    @user.update(user_params)
   end
 
   private
