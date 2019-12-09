@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def create
     #binding.pry
-    @user.new(user_params)
+    @user = User.new(user_params)
   end
 
   private
