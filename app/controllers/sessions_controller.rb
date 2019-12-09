@@ -5,6 +5,6 @@ class SessionsController < ApplicationController
   # and then store the authenticated user's id in the session.
   def create
     @user = User.find(params[:id])
-    session[:user_id] = params[:id]
+    session[:user_id] = @user.id
   end
 end
