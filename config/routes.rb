@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   #resources :users, only: [:new, :create]
 
   get "/signup" => "users#new"
-  post "/signup" => "users#create"
+  post "/users" => "users#create"
 
   get "/login" => "sessions#new"
   post "/login" => "sessions#create"
