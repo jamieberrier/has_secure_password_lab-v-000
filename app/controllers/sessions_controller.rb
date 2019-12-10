@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
   # look up a user in the database, verify their login credentials,
   # and then store the authenticated user's id in the session.
   def create
-    binding.pry
     @user = User.find_by(name: params[:user][:name])
     # try is an ActiveSupport method. object.try(:some_method) means if object != nil then object.some_method else nil end.
     authenticated = @user.try(:authenticate, params[:user][:password])
