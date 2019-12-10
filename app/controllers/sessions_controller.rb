@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   # and then store the authenticated user's id in the session.
   def create
     @user = User.find_by(name: params[:user][:name])
-    binding.pry
+    
     # try is an ActiveSupport method. object.try(:some_method) means if object != nil then object.some_method else nil end.
     #authenticated = @user.try(:authenticate, params[:user][:password])
     # Users should not be able to log in if they enter an incorrect password. Just redirect them back to the login page.
