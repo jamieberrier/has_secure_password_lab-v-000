@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(name: params[:user][:name])
     authenticated = @user.try(:authenticate, params[:user][:password])
     # Users should not be able to log in if they enter an incorrect password. Just redirect them back to the login page.
+    flash[:notice] = "Incorrect PAssword"
     return redirect_to login_path unless authenticated
     session[:user_id] = @user.id
     redirect_to root_path
