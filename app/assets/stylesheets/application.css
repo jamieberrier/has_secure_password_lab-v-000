@@ -13,6 +13,17 @@
  *= require_tree .
  *= require_self
  */
+.flash {
+  width: 600px;
+  padding: 5px;
+  font-weight: bold;
+  margin: 20px;
+  background:#ddd;
+  color:#666;border:1px solid #ccc;
+  text-align: center;
+  align-content: center;
+}
+
 .error {
   background:#F2DEDE;
   color:#B94A48;
