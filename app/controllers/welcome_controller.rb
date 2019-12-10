@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   before_action :require_logged_in
-  
-  def show
 
+  def show
+    binding.pry
   end
 end
