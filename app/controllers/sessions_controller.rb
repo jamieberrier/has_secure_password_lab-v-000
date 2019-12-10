@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.destroy #delete :user_id
+    session.clear #delete :user_id
     redirect_to login_path
   end
 end
