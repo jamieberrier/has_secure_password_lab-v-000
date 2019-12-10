@@ -8,14 +8,6 @@ class UsersController < ApplicationController
     return redirect_to signup_path unless @user.save
     session[:user_id] = @user.id
     redirect_to root_path
-=begin
-    if @user.save
-      session[:user_id] = @user.id
-      redirect_to root_path
-    else
-      redirect_to signup_path
-    end
-=end
   end
 
   private
