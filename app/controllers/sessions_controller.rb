@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(name: params[:user][:name])
     # @user.try(:authenticate, params[:user][:password])
+    # authenticated = @user.try(:authenticate, params[:user][:password])
     # Users should not be able to log in if they enter an incorrect password. Just redirect them back to the login page.
     if @user.authenticate(params[:user][:password])
       session[:user_id] = @user.id
