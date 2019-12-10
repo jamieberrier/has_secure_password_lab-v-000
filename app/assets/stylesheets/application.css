@@ -14,7 +14,7 @@
  *= require_self
  */
 .flash {
-  width: 600px;
+  width: 300px;
   padding: 5px;
   font-weight: bold;
   margin: 20px;
