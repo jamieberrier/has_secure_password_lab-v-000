@@ -14,5 +14,6 @@ class ApplicationController < ActionController::Base
 
   def require_logged_in
     return redirect_to login_path unless logged_in?
+    return head(:forbidden) unless logged_in?
   end
 end
